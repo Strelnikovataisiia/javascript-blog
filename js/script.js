@@ -1,15 +1,15 @@
 'use strict';
 
 function titleClickHandler(event){
-    event.preventDefault();
-    const clickedElement = this;
-    console.log('Link was clicked!');
+  event.preventDefault();
+  const clickedElement = this;
+  console.log('Link was clicked!');
   
   /* [DONE] remove class 'active' from all article links  */
   const activeLinks = document.querySelectorAll('.titles a.active');
   for(let activeLink of activeLinks){
     activeLink.classList.remove('active');
-}
+  }
   /* [IN PROGRESS] add class 'active' to the clicked link */
   clickedElement.classList.add('active');
   console.log('clickedElement:', clickedElement);
@@ -18,7 +18,7 @@ function titleClickHandler(event){
   const activeArticles = document.querySelectorAll('.posts article.active');
   for(let activeArticle of activeArticles){
     activeArticle.classList.remove('active');
-}
+  }
 
   /* [in ] get 'href' attribute from the clicked link */
   const articleSelector = clickedElement.getAttribute('href');
@@ -54,16 +54,16 @@ function generateTitleLinks(){
   let html = '';
   for (let article of articles) {
     /* get the article id */
-    const articleId = article.getAttribute('id')
+    const articleId = article.getAttribute('id');
     console.log (articleId);
     /* find the title element */
 
     /* get the title from the title element */
     const articleTitle = article.querySelector(optTitleSelector).innerHTML;
-      console.log (articleTitle);
+    console.log (articleTitle);
     /* create HTML of the link */
     const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
-      console.log (linkHTML);
+    console.log (linkHTML);
     /* insert link into titleList */
     html = html + linkHTML;
 
