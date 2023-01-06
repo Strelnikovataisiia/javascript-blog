@@ -137,7 +137,8 @@ function generateTags(){
     for(let Tag in allTags){
       //[new2] generate code of a link and add it to allTagsHTML
       //allTagsHTML += '<li><a href="#">' + Tag  + '</a>' + '(' + allTags[Tag] + ') ' + '</li>';
-      allTagsHTML += '<li><a class="' + optCloudClassPrefix + calculateTagClass(allTags[Tag], tagsParams) + '" href="#tag-' + Tag + '">' + Tag  + '</a>' + '(' + allTags[Tag] + ') ' + '</li>';
+      //allTagsHTML += '<li><a class="' + optCloudClassPrefix + calculateTagClass(allTags[Tag], tagsParams) + '" href="#tag-' + Tag + '">' + Tag  + '</a>' + '(' + allTags[Tag] + ') ' + '</li>';
+      allTagsHTML += '<a class="' + optCloudClassPrefix + calculateTagClass(allTags[Tag], tagsParams) + '" href="#tag-' + Tag + '">' + Tag  + ' </a>';
       //[new2] END LOOP: for each tag in allTags:
     }
     //[new2] add html from allTagsHTML to tagList
